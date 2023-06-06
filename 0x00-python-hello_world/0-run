@@ -1,6 +1,2 @@
 #!/bin/bash
-if [ -f "$PYFILE" ]; then
-	python3 $PYFILE
-else
-	exit 1
-fi
+python3 "$PYFILE"
