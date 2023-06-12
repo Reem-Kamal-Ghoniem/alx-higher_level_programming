@@ -1,4 +1,4 @@
-import sys
+#!/usr/bin/python3
 if __name__ == "__main__":
     """print arguments"""
     import sys
@@ -9,6 +9,6 @@ if __name__ == "__main__":
     elif num_arg == 1:
         print("1 argument:")
     else:
-        print("{} arguments:".format(count))
+        print("{} arguments:".format(num_arg))
         for i in range(1, len(sys.argv)):
             print("{}: {}".format(i, sys.argv[i]))
