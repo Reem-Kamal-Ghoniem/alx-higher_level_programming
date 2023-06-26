@@ -7,13 +7,13 @@ def safe_print_list_integers(my_list=[], x=0):
     tmp = 0
     while tmp <= x:
         try:
-            print("{:d}.format(my_list[tmp])", end="")
+            print("{:d}".format(my_list[tmp]), end=""))
             tmp += 1
             c += 1
         except IndexError:
             break
         except (ValueError, TypeError):
-            break
+            brek
     print()
     return (c)
 
