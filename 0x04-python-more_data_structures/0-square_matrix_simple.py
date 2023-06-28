@@ -5,6 +5,9 @@ def square_matrix_simple(matrix=[]):
     if not matrix:
         return None
     new_matrix = []
-    for i in range len(matrix):
-        new_matrix[i] = list(map(lambda x: x ** 2, matrix[i]))
-    return (new_matrix)
+    for row in matrix:
+        new_row = []
+        for num in row:
+            new_row.append(num ** 2)
+        new_matrix.append(new_row)
+    return new_matrix
