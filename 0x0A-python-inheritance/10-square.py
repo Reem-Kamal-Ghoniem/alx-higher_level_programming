@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """square number one"""
-Rectangle = __import__(9-rectangle.py).Rectangle 
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
