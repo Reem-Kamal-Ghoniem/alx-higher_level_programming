@@ -85,8 +85,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """returning the rectangle as a string"""
-        str_wh = "{}/{}".format(self.width, self.height)
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - str_wh"
+        rec_tangle = "[Rectangle] "
+        _id = "({}) ".format(self.id)
+        xy = "{}/{} - ".format(self.x, self.y)
+        wh = "{}/{}".format(self.width, self.height)
+        return rec_tangle + _id + xy + wh
 
     def update(self, *args, **kwargs):
         """using args, and kwargs"""
