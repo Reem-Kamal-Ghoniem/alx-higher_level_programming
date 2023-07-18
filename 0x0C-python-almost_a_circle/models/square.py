@@ -16,7 +16,7 @@ class Square(Rectangle):
         _square = "[Square] "
         _id = "({}) ".format(self.id)
         _xy = "{}/{} - ".format(self.x, self.y)
-        _wh = "{}/{}".format(self.width)
+        _wh = "{}".format(self.width)
 
         return _square + _id + _xy + _wh
 
