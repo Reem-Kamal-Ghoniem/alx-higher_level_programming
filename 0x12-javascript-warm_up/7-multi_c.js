@@ -1,7 +1,6 @@
 #!/usr/bin/node
-let x = +process.argv[2];
-if (x){
-  for (let i = 0; i < x; i++) {
+if (+process.argv[2]) {
+  for (let i = 0; i < (+process.argv[2]); i++) {
     console.log('C is fun');
   }
 } else {
