@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let x = +process.argv[2]
+let x = +process.argv[2];
 if (x){
   for (let i = 0; i < x; i++) {
     console.log('C is fun');
