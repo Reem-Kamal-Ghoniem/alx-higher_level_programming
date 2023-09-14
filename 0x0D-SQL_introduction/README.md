@@ -1,0 +1,1 @@
+starting writing SQL queries
