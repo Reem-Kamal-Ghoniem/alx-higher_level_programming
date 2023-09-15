@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""a script that takes in an argument and displays all values in
-the states table of hbtn_0e_0_usa where name matches the argument."""
+"""a script that  lists all states with a name starting with N"""
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 4:
         sys.exit(1)
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    name_ = sys.argv[4]
+
     connection = MySQLdb.connect(
             host="localhost",
             port=3306,
@@ -20,12 +19,15 @@ if __name__ == "__main__":
             charset="utf8"
         )
     cur = connection.cursor()
-    que = "SELECT * FROM states WHERE name LIKE BINARY\
-            '{}' ORDER BY states.id ASC".format(name_)
-    cur.execute(que)
+    cur.execute("""
+        SELECT cities.id, cities.name, states.name
+        FROM cities
+        INNER JOIN states ON cities.state_id = states.id
+        ORDER BY cities.id ASC
+        """)
     rows = cur.fetchall()
-    if rows is not None:
-        print(rows)
+    for row in rows:
+        print(row)
 
     cur.close()
     connection.close()

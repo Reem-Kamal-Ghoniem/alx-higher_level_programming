@@ -22,7 +22,7 @@ if __name__ == "__main__":
     cur = connection.cursor()
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cur.execute(query, (name_,))
-    rows = cur.fetchone()
+    rows = cur.fetchall()
     if rows is not None:
         print(rows)
 
