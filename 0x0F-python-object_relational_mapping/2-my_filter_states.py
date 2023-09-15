@@ -20,8 +20,8 @@ if __name__ == "__main__":
             charset="utf8"
         )
     cur = connection.cursor()
-    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(name_)
-    cur.execute(query)
+    que = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(name_)
+    cur.execute(que)
     rows = cur.fetchone()
     if rows is not None:
         print(rows)
