@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cur.execute(query, (name_,))
     rows = cur.fetchone()
     if rows is not None:
-        print (rows)
+        print(rows)
 
     cur.close()
     connection.close()
