@@ -7,6 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
+Base.metadata.create_all(engine)
 class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
