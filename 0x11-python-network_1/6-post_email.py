@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""posting email address to a certain URL"""
 import requests
 import sys
 
